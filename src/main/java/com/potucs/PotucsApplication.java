@@ -1,5 +1,6 @@
 package com.potucs;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
+@MapperScan("com.potucs.mapper")//扫描的mapper
 public class PotucsApplication {
     public static void main(String[] args) {
         //启动spring应用程序

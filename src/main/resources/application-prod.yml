@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: root
+    password: iweueue===!!!!dkkddkdkd0w9skskckjdu1003
+    url: jdbc:mysql://49.232.228.221:3306/potucs?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
+
+#mybatis
+mybatis:
+  mapper-locations: classpath*:com/potucs/mapper/*Mapper.xml
+
