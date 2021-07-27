@@ -58,4 +58,22 @@
         </if>
 
     </select>
+
+
+    <select id="findFlightsForHandlerByCondition" resultType="com.potucs.domain.Flight">
+        select
+        id as id,flight_no as flightNo , flight_name_start as flightNameStart ,
+        airlines_code as airlinesCode,flight_frequency as flightRequency,
+        flight_name_end as flightNameEnd,flight_date as flightDate,
+        create_time as createTime from flight WHERE 1=1
+
+        <if test="flightNameEnd != null  and flightNameEnd != '' ">
+            AND flight_name_end = #{flightNameEnd,jdbcType=VARCHAR}
+        </if>
+
+        <if test="flightNameStart != null  and flightNameStart != '' ">
+            AND flight_name_start = #{flightNameStart,jdbcType=VARCHAR}
+        </if>
+
+    </select>
 </mapper>
