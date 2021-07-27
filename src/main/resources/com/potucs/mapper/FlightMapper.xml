@@ -60,7 +60,8 @@
     </select>
 
 
-    <select id="findFlightsForHandlerByCondition" resultType="com.potucs.domain.Flight">
+    <select id="findFlightsForHandlerByCondition"  parameterType="com.potucs.condition.FlightCondition"
+            resultType="com.potucs.domain.Flight">
         select
         id as id,flight_no as flightNo , flight_name_start as flightNameStart ,
         airlines_code as airlinesCode,flight_frequency as flightRequency,

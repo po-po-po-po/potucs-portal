@@ -47,13 +47,15 @@ public class TestPotucs {
         }
     }
 
+    /**
+     * 从数据库查询出海量数据防止内存溢出
+     */
     @Test
     public void testHandler()  {
-        Map<String, Integer> params = new HashMap<String, Integer>();
-        params.put("pageStart", 1);
-        params.put("pageEnd", 10);
-        sqlSessionTemplate.select("com.potucs.mapper.FlightMapper.findFlightsForHandlerByCondition", flightTemporaryResultHandler);
-
+        FlightCondition flightCondition=new FlightCondition();
+        flightCondition.setFlightNameStart("北京首都T2");
+        flightCondition.setFlightNameEnd("长春龙嘉T2");
+        sqlSessionTemplate.select("com.potucs.mapper.FlightMapper.findFlightsForHandlerByCondition", flightCondition,flightTemporaryResultHandler);
     }
 
 

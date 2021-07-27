@@ -19,7 +19,7 @@ public interface FlightMapper {
 
     List<Flight> findFlightsByCondition(FlightCondition condition);
 
-    void findFlightsForHandlerByCondition(ResultHandler<Flight> resultHandler);
+    void findFlightsForHandlerByCondition(FlightCondition condition,ResultHandler<Flight> resultHandler);
 
 }
 
