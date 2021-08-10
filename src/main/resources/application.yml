@@ -3,3 +3,5 @@ spring:
     active: prod
 server:
   port: 9999
+  servlet:
+    context-path: /potucs/portal

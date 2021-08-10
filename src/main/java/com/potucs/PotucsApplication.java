@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * @Description
  */
 
-@SpringBootApplication(scanBasePackages = {"com.potucs.handler"})
+@SpringBootApplication(scanBasePackages = {"com.potucs.controller","com.potucs.handler","com.potucs.config"})
 @MapperScan("com.potucs.mapper")//扫描的mapper
 @Service
 public class PotucsApplication {
